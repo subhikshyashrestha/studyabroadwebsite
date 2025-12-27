@@ -88,13 +88,12 @@
   font-size: 13px;
 }
 
-/* Optional hover effect */
+
 .location-card:hover {
   transform: translateY(-3px);
   transition: 0.3s;
 }
 
-/* LOCATION IMAGE */
 .location-image {
   margin: 20px auto 0;
   width: 100%;
@@ -103,7 +102,6 @@
   border-radius: 12px;
 }
 
-/* FOOTER BOTTOM */
 .footer-bottom {
   margin-top: 30px;
 }
@@ -116,10 +114,9 @@
   text-align: center;
 }
 
-/* Footer bottom content: left + right */
 .footer-bottom-content {
   display: flex;
-  justify-content: space-between; /* left on left, right on right */
+  justify-content: space-between; 
   align-items: center;
   margin-top: 15px;
   flex-wrap: wrap;
@@ -142,7 +139,6 @@
   font-size: 12px;
 }
 
-/* Right-side image */
 .footer-right img {
   width: 300px;/* adjust as needed */
   height: auto;

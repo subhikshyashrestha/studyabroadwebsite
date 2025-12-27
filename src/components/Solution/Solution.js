@@ -58,7 +58,6 @@ function Solution() {
           <h2 className="solution-title">Partnered with <span>500+ Trusted Universities Worldwide</span></h2>
         </div>
 
-        {/* Partnered Universities Section */}
 
   <div className="partners-image">
     <img src={require("../../assets/solution/Frame 56.png")} alt="Partnered Universities" />

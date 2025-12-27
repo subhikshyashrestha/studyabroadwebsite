@@ -1,4 +1,4 @@
-/* shared container width like figma */
+
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -11,7 +11,6 @@
   background: #fff;
 }
 
-/* ===================== TOP BAR ===================== */
 .top-bar {
   background: #fff;
   border-bottom: 1px solid #eeeeee;
@@ -74,7 +73,7 @@
   opacity: 0.7;
 }
 
-/* ===================== MAIN NAV ===================== */
+
 .navbar-main {
   background: #fff;
   border-bottom: 1px solid #eeeeee;
@@ -123,7 +122,6 @@
   gap: 16px;
 }
 
-/* vertical divider between menu and search (figma) */
 .nav-divider {
   width: 1px;
   height: 30px;
@@ -165,7 +163,6 @@
   color: #fff;
 }
 
-/* ===================== HAMBURGER ===================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -180,7 +177,6 @@
   border-radius: 2px;
 }
 
-/* ===================== MOBILE SIDEBAR (FIGMA MATCH) ===================== */
 .sidebar {
   position: fixed;
   top: 0;
@@ -196,7 +192,7 @@
   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Top: X left, Search right */
+
 .sidebar-top {
   display: flex;
   justify-content: space-between;
@@ -256,15 +252,12 @@
   gap: 14px;
 }
 
-
-/* Social icons at bottom left */
 .sidebar-socials {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-/* overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -275,7 +268,7 @@
   z-index: 150;
 }
 
-/* ===================== RESPONSIVE ===================== */
+
 @media screen and (max-width: 760px) {
   .top-bar {
     display: none;
@@ -292,7 +285,6 @@
   }
 }
 
-/* Prevent horizontal scroll */
 html, body {
   margin: 0;
   padding: 0;

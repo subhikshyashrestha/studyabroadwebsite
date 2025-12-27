@@ -71,13 +71,14 @@
   .success-layout {
     flex-direction: column;
     gap: 30px;
+    
   }
 
   /* LEFT: two main images side by side */
   .success-left {
     flex-direction: row;
     overflow-x: auto;
-    gap: 15px;
+    gap: 40px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
@@ -112,8 +113,26 @@
 
 /* Make ONLY the bottom image smaller on desktop */
 @media (min-width: 1024px) {
+  .success-layout {
+  display: flex;
+  gap: 24px; /* overall gap between left and right */
+}
+
+/* Left column (2 images stacked) */
+.success-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* smaller gap between images */
+  flex: 0 0 auto; /* don't stretch */
+  align-items: flex-start; /* align images to left */
+}
+  
+  .success-left img:first-child {
+    width: 150%;
+    max-width: 250px;
+  }
   .success-left img:last-child {
-    width: 70%;
-    max-width: 360px;
+    width: 100%;
+    max-width: 100px;
   }
 }

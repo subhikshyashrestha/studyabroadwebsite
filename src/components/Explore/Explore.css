@@ -23,11 +23,11 @@
   color: #555;
 }
 
-/* Wrapper keeps alignment consistent */
+
 .explore-scroll-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 20px; /* 👈 starts slightly right */
+  padding-left: 20px; 
 }
 
 /* Horizontal Scroll */

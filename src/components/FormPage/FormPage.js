@@ -81,7 +81,7 @@ const FormPage = () => {
           </form>
         </div>
 
-        {/* IMAGE SECTION */}
+      
         <div className="image-section">
           <img src={studyImg} alt="Students discussion" />
         </div>

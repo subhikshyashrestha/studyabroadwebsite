@@ -10,7 +10,7 @@ function Events() {
   return (
     <section className="events-page">
       <div className="events-wrapper">
-        {/* INNER WRAPPER (same width as 3 cards row) */}
+       
         <div className="events-inner">
           {/* Header with Button */}
           <div className="events-header-wrapper">
