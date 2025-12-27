@@ -1,0 +1,88 @@
+/* ================= Global Styles ================= */
+
+/* Reset default margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body default font */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Blue filled button */
+.btn-blue {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+}
+
+.btn-blue:hover {
+  background-color: #2563eb;
+}
+
+/* White outlined button with blue border */
+.btn-outline-blue {
+  background-color: white;
+  color: #1d4ed8;
+  border: 2px solid #1d4ed8;
+}
+
+.btn-outline-blue:hover {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+/* ===== Links ===== */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ===== Flex utility ===== */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Gaps ===== */
+.gap-10 { gap: 10px; }
+.gap-15 { gap: 15px; }
+.gap-20 { gap: 20px; }
+.gap-40 { gap: 40px; }
+
+/* ===== Rounded ===== */
+.rounded { border-radius: 8px; }
+
+/* ===== Colors ===== */
+.text-blue { color: #1d4ed8; }
+.bg-white { background-color: white; }

@@ -1,0 +1,86 @@
+.events-page {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.events-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.events-header {
+  text-align: left; 
+  margin-bottom: 40px;
+}
+
+
+.events-header h1 {
+  font-size: 1 rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.black-text {
+  color: #111;
+}
+
+.blue-text {
+  color: #1d4ed8;
+}
+
+.subheading {
+  font-size: 1 rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+.view-all-btn {
+  padding: 10px 20px;
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: #2563eb;
+}
+
+/* Event Images Container */
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start; /* start from same left edge as text */
+}
+
+.event-image {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .events-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding-bottom: 10px;
+    justify-content: flex-start; /* start from first card */
+  }
+
+  .event-image {
+    width: 250px;
+  }
+}
+

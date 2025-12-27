@@ -1,0 +1,115 @@
+.hero {
+    background-color: #f3e888;
+    padding: 30px 20px; /* reduce top & bottom padding */
+    display: block;
+}
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+/* Experts image container */
+.hero-experts {
+  margin-top: -40px;
+  display: flex;
+  justify-content:flex-start; /* horizontal center on desktop */
+  gap: 20px; /* space between images */
+  position: relative;
+  z-index: 10;
+}
+
+.hero-experts img {
+  width: 200px; /* adjust as needed */
+  height: auto;
+  border-radius: 8px; /* optional rounded corners */
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-experts img:hover {
+  transform: scale(1.05); /* subtle hover effect */
+}
+
+/* Mobile responsiveness: stack vertically */
+@media screen and (max-width: 768px) {
+  .hero-experts {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .hero-experts img {
+    width: 30%; /* scale down for mobile */
+  }
+}
+
+/* Left text section */
+.hero-content {
+  flex: 1;
+  margin-bottom: -20px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 500px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Button */
+.hero-btn {
+  background: #1d4ed8;
+  color: white;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #2563eb;
+}
+
+/* Right image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+
+  width: 95%;
+  max-width: 400%;
+  height: auto;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content p {
+    margin: 0 auto 30px;
+  }
+}
+
+

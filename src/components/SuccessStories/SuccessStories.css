@@ -1,0 +1,118 @@
+.success-page {
+  width: 100%;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.success-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.success-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.success-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+}
+.sucess-title span {
+  color: #1d4ed8;
+}
+
+.success-header .subheading {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Desktop Layout */
+.success-layout {
+  display: flex;
+  gap: 24px;
+}
+
+/* Left column (2 images stacked) */
+.success-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.success-left img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Right column (3 images side by side) */
+.success-right {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+}
+
+.success-right img {
+  width: 220%;
+  height: auto;
+ 
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .success-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* LEFT: two main images side by side */
+  .success-left {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .success-left img {
+    flex: 0 0 auto;
+    width: 190px;
+    height: auto;
+    scroll-snap-align: start;
+  }
+
+  /* RIGHT: 3 images horizontal scroll */
+  .success-right {
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .success-right img {
+    flex: 0 0 auto;
+    width: 220px;
+    height: auto;
+    scroll-snap-align: start;
+  }
+
+  .success-left::-webkit-scrollbar,
+  .success-right::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Make ONLY the bottom image smaller on desktop */
+@media (min-width: 1024px) {
+  .success-left img:last-child {
+    width: 70%;
+    max-width: 360px;
+  }
+}

@@ -1,0 +1,163 @@
+.solution-page {
+  width: 100%;
+  padding: 60px 20px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Header */
+.solution-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.solution-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.solution-header .subheading {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Content Section */
+.solution-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left: Image */
+.solution-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.solution-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Right: Text */
+.solution-text {
+  flex: 1;
+}
+
+.solution-text h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 20px;
+}
+.solution-title span {
+  color: #1d4ed8;
+}
+.solution-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.solution-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.solution-text li {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.career-btn {
+  padding: 12px 24px;
+  background: #2b417b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.career-btn:hover {
+  background: #2d5dc3;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .partners-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .solution-content {
+    flex-direction: column;
+  }
+
+  .solution-image {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .solution-header h1 {
+    font-size: 2rem;
+  }
+
+  .solution-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .career-btn {
+    width: 200%;
+    max-width: 300px;
+  }
+   
+}
+
+/* Partnered Universities Section */
+.partners-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.partners-section h2 {
+  font-size: 1.5rem;
+  color: #111;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .partners-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.partners-image {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.partners-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* optional */
+}
+
