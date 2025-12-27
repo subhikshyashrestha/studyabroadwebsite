@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logos/Layer 2.png";
-import sidebarImage from "../../assets/footer/Frame 879.png";
 import { FaSearch, FaTimes, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
-
+import Button from "../Button/Button";
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const sidebarLinks = [
-    "Services",
-    "Study Destinations",
-    "Scholarships",
-    "Test Preparation",
-    "Programs & University",
-    "Blogs",
-    "Events",
-    "About Us",
-    "Mock Test",
-    "Student Resources",
+    { label: "Services", hasArrow: true },
+    { label: "Study Destinations", hasArrow: true },
+    { label: "Scholarships", hasArrow: false },
+    { label: "Test Preparation", hasArrow: false },
+    { label: "Program & University", hasArrow: false },
+    { label: "Blogs", hasArrow: false },
+    { label: "Events", hasArrow: false },
+    { label: "About Us", hasArrow: false },
+    { label: "Mock Test", hasArrow: false },
+    { label: "Student Resources", hasArrow: true },
   ];
 
   return (
@@ -55,7 +55,6 @@ function Navbar() {
       {/* MAIN NAVBAR */}
       <div className="navbar-main">
         <div className="nav-inner navbar-container">
-          {/* Left: Logo */}
           <div className="left-section">
             <div
               className="hamburger"
@@ -73,7 +72,6 @@ function Navbar() {
             </a>
           </div>
 
-          {/* Center Links (desktop) */}
           <ul className="nav-links">
             <li className="has-caret">
               <a href="/services">
@@ -90,20 +88,17 @@ function Navbar() {
             <li><a href="/programs">Program &amp; University</a></li>
           </ul>
 
-          {/* Right: Divider + Search + Contact */}
           <div className="right-section">
             <span className="nav-divider" />
-
             <button className="search-btn" aria-label="Search">
               <FaSearch size={18} />
             </button>
-
-            <button className="contact-btn">Contact Us</button>
+            <Button variant="secondary" size="md">Contact Us</Button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* MOBILE SIDEBAR */}
       {isMobileMenuOpen && (
         <>
           <div className="sidebar">
@@ -113,26 +108,40 @@ function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-label="Close menu"
               >
-                <FaTimes size={20} />
+                <FaTimes size={22} />
               </button>
-              <button className="search-btn" aria-label="Search">
-                <FaSearch size={16} />
+
+              <button className="sidebar-search-btn" aria-label="Search">
+                <FaSearch size={18} />
               </button>
             </div>
 
             <ul className="sidebar-links">
-              {sidebarLinks.map((link, index) => (
+              {sidebarLinks.map((item, index) => (
                 <li key={index}>
                   <a href="#" onClick={() => setIsMobileMenuOpen(false)}>
-                    {link}
+                    <span>{item.label}</span>
+                    {item.hasArrow && <FaChevronRight className="side-arrow" size={14} />}
                   </a>
                 </li>
               ))}
             </ul>
 
             <div className="sidebar-bottom">
-              <button className="contact-btn">Contact Us</button>
-              <img src={sidebarImage} alt="Sidebar Visual" />
+              <Button variant="secondary" size="md">Contact Us</Button>
+
+
+              <div className="sidebar-socials">
+                <a href="#" aria-label="Facebook" className="social-circle">
+                  <FaFacebookF size={14} />
+                </a>
+                <a href="#" aria-label="Instagram" className="social-circle">
+                  <FaInstagram size={14} />
+                </a>
+                <a href="#" aria-label="TikTok" className="social-circle">
+                  <FaTiktok size={14} />
+                </a>
+              </div>
             </div>
           </div>
 

@@ -3,7 +3,7 @@ import "./Events.css";
 import event1 from "../../assets/events/Frame 242.png";
 import event2 from "../../assets/events/Frame 243.png";
 import event3 from "../../assets/events/Frame 244.png";
-
+import Button from "../Button/Button";
 function Events() {
   const events = [event1, event2, event3];
 
@@ -25,7 +25,8 @@ function Events() {
             </div>
 
             <div className="events-button-wrapper">
-              <button className="view-all-btn">View All Events</button>
+              <Button variant="primary" size="sm">View All Events</Button>
+
             </div>
           </div>
 

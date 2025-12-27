@@ -2,7 +2,7 @@ import React from "react";
 import "./Legacy.css";
 import mainImage from "../../assets/legacy/Frame 54.png"; // main right-side image
 import sideImage from "../../assets/legacy/Frame 51.png"; // image on left below text
-
+import Button from "../Button/Button";
 function Legacy() {
   return (
     <section className="legacy">
@@ -26,9 +26,8 @@ function Legacy() {
           </div>
           {/* Learn More Button */}
           <div className="legacy-btn-container">
-            <button className="legacy-btn">
-              Learn more about 360 Education
-            </button>
+            <Button variant="primary" size="md">Learn more about 360 Education</Button>
+
           </div>
         </div>
 

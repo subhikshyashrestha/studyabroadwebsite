@@ -1,6 +1,7 @@
 import React from "react";
 import "./FormPage.css";
 import studyImg from "../../assets/Form/Group 40709.png";
+import Button from "../Button/Button";
 
 const FormPage = () => {
   return (
@@ -75,7 +76,8 @@ const FormPage = () => {
               />
             </div>
 
-            <button type="submit">Send Message</button>
+           <Button type="submit" variant="yellow" size="md">Send Message</Button>
+
           </form>
         </div>
 

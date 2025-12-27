@@ -16,7 +16,7 @@
 }
 
 .success-header h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #111;
 }
@@ -28,6 +28,7 @@
   margin-top: 12px;
   font-size: 1rem;
   color: #555;
+  font-weight: 400;
 }
 
 /* Desktop Layout */
@@ -50,7 +51,7 @@
   object-fit: cover;
 }
 
-/* Right column (3 images side by side) */
+
 .success-right {
   display: flex;
   gap: 20px;

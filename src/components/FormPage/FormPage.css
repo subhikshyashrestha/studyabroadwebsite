@@ -91,17 +91,6 @@ textarea {
   font-size: 13px;
 }
 
-/* BUTTON */
-button {
-  margin-top: 8px;
-  height: 50px;
-  background: #ffc107;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
 
 /* IMAGE */
 .image-section {

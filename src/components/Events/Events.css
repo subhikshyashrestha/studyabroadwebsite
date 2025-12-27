@@ -1,6 +1,6 @@
 .events-page {
   width: 100%;
-  padding: 60px 20px;
+  padding: 30px 20px;
   background: #f9f9f9;
   box-sizing: border-box;
 }
@@ -55,22 +55,7 @@
   margin-top: 6px; /* small top adjust like figma */
 }
 
-/* View All Events Button — Figma-like */
-.view-all-btn {
-  height: 38px;
-  padding: 0 18px;
-  background: #263e81;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 38px;
-  cursor: pointer;
-  white-space: nowrap;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  transition: background 0.2s ease;
-}
+
 
 .view-all-btn:hover {
   background: #1f3570;

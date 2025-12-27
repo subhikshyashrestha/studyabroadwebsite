@@ -1,6 +1,7 @@
 import React from "react";
 import "./Solution.css";
 import solutionImage from "../../assets/solution/Group 14.png"; // replace with your image path
+import Button from "../Button/Button";
 
 function Solution() {
   const bulletPoints = [
@@ -47,9 +48,8 @@ function Solution() {
               <li key={index}>{point}</li>
             ))}
           </ul>
-          <button className="career-btn">
-            View Career Counseling in Detail
-          </button>
+          <Button variant="primary" size="md">View Career Counseling in Detail</Button>
+
         </div>
        
       </div>
