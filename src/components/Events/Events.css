@@ -10,16 +10,29 @@
   margin: 0 auto;
 }
 
-/* Header */
-.events-header {
-  text-align: left; 
-  margin-bottom: 40px;
+/* ✅ Makes header and cards share same width (3 cards + 2 gaps) */
+.events-inner {
+  max-width: 960px; /* 300*3 + 30*2 */
+  margin: 0 auto;
 }
 
+/* Header Wrapper for heading + button */
+.events-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* match figma */
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* Header */
+.events-header {
+  text-align: left;
+}
 
 .events-header h1 {
-  font-size: 1 rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -32,25 +45,35 @@
 }
 
 .subheading {
-  font-size: 1 rem;
+  font-size: 1rem;
   color: #555;
   margin-top: 10px;
 }
 
+/* View All Events Button wrapper */
+.events-button-wrapper {
+  margin-top: 6px; /* small top adjust like figma */
+}
 
+/* View All Events Button — Figma-like */
 .view-all-btn {
-  padding: 10px 20px;
-  background: #1d4ed8;
-  color: white;
+  height: 38px;
+  padding: 0 18px;
+  background: #263e81;
+  color: #fff;
   border: none;
   border-radius: 8px;
+  font-size: 13px;
   font-weight: 500;
+  line-height: 38px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s ease;
 }
 
 .view-all-btn:hover {
-  background: #2563eb;
+  background: #1f3570;
 }
 
 /* Event Images Container */
@@ -58,7 +81,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: flex-start; /* start from same left edge as text */
+  justify-content: flex-start;
 }
 
 .event-image {
@@ -70,17 +93,26 @@
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
+  .events-inner {
+    max-width: 100%; /* full width on mobile */
+  }
+
+  .events-header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
   .events-container {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     gap: 15px;
     padding-bottom: 10px;
-    justify-content: flex-start; /* start from first card */
+    justify-content: flex-start;
   }
 
   .event-image {
     width: 250px;
   }
 }
-

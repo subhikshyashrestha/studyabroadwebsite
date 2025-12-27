@@ -25,12 +25,7 @@ function Hero() {
         </div>
         
       </div>
-      {/* Experts Image Section */}
-      <div className="hero-experts">
-        {experts.map((img, index) => (
-          <img key={index} src={img} alt={`Expert ${index + 1}`} />
-        ))}
-      </div>
+      
       
     </section>
   );

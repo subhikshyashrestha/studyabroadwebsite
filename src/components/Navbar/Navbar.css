@@ -1,48 +1,171 @@
-/* Top Bar */
-.top-bar {
-  width: 100%;
-  background:white; /* light gray */
-  padding: 5px 20px;
-  display: flex;
-  justify-content: flex-end;
+/* shared container width like figma */
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+  box-sizing: border-box;
 }
 
+.navbar {
+  width: 100%;
+  background: #fff;
+}
+
+/* ===================== TOP BAR ===================== */
+.top-bar {
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.top-inner {
+  height: 44px;                 /* figma-like */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* social circles on left */
+.top-socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-circle {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.social-circle:hover {
+  border-color: #cfcfcf;
+}
+
+/* top links on right */
 .top-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 26px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .top-links li a {
   text-decoration: none;
-  color: #868282;
+  color: #2c2c2c;
   font-weight: 400;
-  gap: 40px;
-  font-size: 1rem;
-  align-items: center;
-  margin-right: 20px;
+  font-size: 15px;
 }
 
-/* Navbar container */
+.has-caret a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.caret {
+  opacity: 0.7;
+}
+
+/* ===================== MAIN NAV ===================== */
+.navbar-main {
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+}
+
 .navbar-container {
+  height: 78px;                 /* figma-like */
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  justify-content: space-between;
 }
 
-/* Left section: Hamburger + Logo */
+/* left */
 .left-section {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
 }
 
-/* Hamburger */
+.logo img {
+  height: 54px;                 /* match figma scale */
+  display: block;
+}
+
+/* center links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 34px;                    /* figma spacing */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* right */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* vertical divider between menu and search (figma) */
+.nav-divider {
+  width: 1px;
+  height: 30px;
+  background: #e7e7e7;
+  display: inline-block;
+}
+
+/* search icon */
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1d4ed8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.search-btn:hover {
+  opacity: 0.85;
+}
+
+/* Contact button (outlined, figma) */
+.contact-btn {
+  background: #fff;
+  color: #1d4ed8;
+  border: 2px solid #1d4ed8;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+/* ===================== HAMBURGER + MOBILE ===================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -51,106 +174,73 @@
 
 .hamburger span {
   height: 3px;
-  width: 25px;
+  width: 26px;
   background: #333;
   margin: 4px 0;
   border-radius: 2px;
 }
 
-/* Logo */
-.logo img {
-  height: 40px;
-  
-}
-
-/* Desktop Links */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 500;
-  font-size: 1rem;
-}
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* space between search and contact button */
-  margin-right: 20px;
-}
-
-/* Search button */
-.search-btn {
-  background: none;   
-  color: #1d4ed8;   
-  border: none;  
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;    
-  padding: 5px;  
-  border-radius: 50%;       
-  transition: color 0.2s ease;
-}
-
-.search-btn:hover {
-  color: #2563eb;             /* darker blue on hover */
-}
-
-
-
-.contact-btn {
-  background: white;
-  color: #1d4ed8;
-  padding: 8px 15px;
-  border: 2px solid #1d4ed8;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-/* Sidebar for Mobile */
+/* Mobile Sidebar (same as your old, kept) */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 280px;
   height: 100%;
-  background: white;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
-  padding: 20px;
+  background: #fff;
   z-index: 200;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
 }
 
-.sidebar ul {
+.sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-links {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  flex-grow: 1;
 }
 
-.sidebar li a {
+.sidebar-links li a {
   text-decoration: none;
-  color: #333;
+  color: #050404;
   font-weight: 500;
+  font-size: 1rem;
 }
 
-/* Overlay */
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-bottom .contact-btn {
+  width: 100%;
+}
+
+.sidebar-bottom img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -161,32 +251,25 @@
   z-index: 150;
 }
 
-/* Responsive */
 @media screen and (max-width: 760px) {
   .top-bar {
-    display: none; /* hide top bar on mobile */
+    display: none;
   }
 
   .nav-links,
-  .contact-btn {
-    display: none; /* hide desktop links on mobile */
+  .contact-btn,
+  .nav-divider {
+    display: none;
   }
 
   .hamburger {
-    display: flex; /* show hamburger on mobile */
+    display: flex;
   }
 }
 
 /* Prevent horizontal scroll */
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-/* Optional: make navbar elements wrap on small screens */
-.navbar-container,
-.top-bar {
-  max-width: 100%;
-  box-sizing: border-box;
 }

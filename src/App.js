@@ -4,13 +4,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 
 
-import Events from './components/Events/Events';
+
 import FormPage from './components/FormPage/FormPage';
 import Explore from './components/Explore/Explore';
 import Legacy from './components/Legacy/Legacy';
 import Solution from './components/Solution/Solution';
 import './components/SuccessStories/SuccessStories';
 import SuccessStories from './components/SuccessStories/SuccessStories';
+import Events from './components/Events/Events';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
       <Legacy />
       <Solution />
       <SuccessStories/>
+      <Footer />
 
 
     </div>

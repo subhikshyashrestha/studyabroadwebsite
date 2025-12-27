@@ -10,27 +10,37 @@ function Events() {
   return (
     <section className="events-page">
       <div className="events-wrapper">
-        {/* Header */}
-        <div className="events-header">
-          <h1>
-            <span className="black-text">Upcoming </span>
-            <span className="blue-text">Events</span>
-          </h1>
-          <p className="subheading">
-            Turn your international education dreams into reality.
-          </p>
-        </div>
-         
+        {/* INNER WRAPPER (same width as 3 cards row) */}
+        <div className="events-inner">
+          {/* Header with Button */}
+          <div className="events-header-wrapper">
+            <div className="events-header">
+              <h1>
+                <span className="black-text">Upcoming </span>
+                <span className="blue-text">Events</span>
+              </h1>
+              <p className="subheading">
+                Turn your international education dreams into reality.
+              </p>
+            </div>
 
-      
+            <div className="events-button-wrapper">
+              <button className="view-all-btn">View All Events</button>
+            </div>
+          </div>
 
-        {/* Event Images */}
-        <div className="events-container">
-          {events.map((img, index) => (
-            <img key={index} src={img} alt={`Event ${index + 1}`} className="event-image"/>
-          ))}
+          {/* Event Images */}
+          <div className="events-container">
+            {events.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Event ${index + 1}`}
+                className="event-image"
+              />
+            ))}
+          </div>
         </div>
-         
       </div>
     </section>
   );

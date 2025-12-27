@@ -1,59 +1,105 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logos/Layer 2.png";
-import { FaSearch } from "react-icons/fa";
+import sidebarImage from "../../assets/footer/Frame 879.png";
+import { FaSearch, FaTimes, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa6";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const topLinks = ["Blogs", "Events", "About Us", "Mock Test", "Student Resources"];
-  const mainLinks = [
+  const sidebarLinks = [
     "Services",
     "Study Destinations",
     "Scholarships",
     "Test Preparation",
     "Programs & University",
+    "Blogs",
+    "Events",
+    "About Us",
+    "Mock Test",
+    "Student Resources",
   ];
 
   return (
     <nav className="navbar">
-      {/* Top Bar */}
+      {/* TOP BAR */}
       <div className="top-bar">
-        <ul className="top-links">
-          {topLinks.map((link, index) => (
-            <li key={index}><a href="#">{link}</a></li>
-          ))}
-        </ul>
+        <div className="nav-inner top-inner">
+          <div className="top-socials">
+            <a href="#" aria-label="Facebook" className="social-circle">
+              <FaFacebookF size={14} />
+            </a>
+            <a href="#" aria-label="Instagram" className="social-circle">
+              <FaInstagram size={14} />
+            </a>
+            <a href="#" aria-label="TikTok" className="social-circle">
+              <FaTiktok size={14} />
+            </a>
+          </div>
+
+          <ul className="top-links">
+            <li><a href="/blogs">Blogs</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/mock-test">Mock Test</a></li>
+            <li className="has-caret">
+              <a href="/student-resources">
+                Student Resources <FaChevronDown className="caret" size={12} />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      {/* Main Navbar */}
-      <div className="navbar-container">
-        {/* Left Section: Hamburger + Logo */}
-        <div className="left-section">
-          <div className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            <span></span>
-            <span></span>
-            <span></span>
+      {/* MAIN NAVBAR */}
+      <div className="navbar-main">
+        <div className="nav-inner navbar-container">
+          {/* Left: Logo */}
+          <div className="left-section">
+            <div
+              className="hamburger"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              role="button"
+              aria-label="Open menu"
+            >
+              <span />
+              <span />
+              <span />
+            </div>
+
+            <a className="logo" href="/">
+              <img src={logo} alt="Logo" />
+            </a>
           </div>
 
-          <div className="logo">
-            <img src={logo} alt="Logo" />
+          {/* Center Links (desktop) */}
+          <ul className="nav-links">
+            <li className="has-caret">
+              <a href="/services">
+                Services <FaChevronDown className="caret" size={12} />
+              </a>
+            </li>
+            <li className="has-caret">
+              <a href="/study-destinations">
+                Study Destinations <FaChevronDown className="caret" size={12} />
+              </a>
+            </li>
+            <li><a href="/scholarships">Scholarships</a></li>
+            <li><a href="/test-preparation">Test Preparation</a></li>
+            <li><a href="/programs">Program &amp; University</a></li>
+          </ul>
+
+          {/* Right: Divider + Search + Contact */}
+          <div className="right-section">
+            <span className="nav-divider" />
+
+            <button className="search-btn" aria-label="Search">
+              <FaSearch size={18} />
+            </button>
+
+            <button className="contact-btn">Contact Us</button>
           </div>
-        </div>
-
-        {/* Center Links */}
-        <ul className="nav-links">
-          {mainLinks.map((link, index) => (
-            <li key={index}><a href="#">{link}</a></li>
-          ))}
-        </ul>
-
-        {/* Right Section: Search + Contact */}
-        <div className="right-section">
-          <button className="search-btn" aria-label="Search">
-            <FaSearch size={16} />
-          </button>
-          <button className="contact-btn">Contact Us</button>
         </div>
       </div>
 
@@ -61,32 +107,36 @@ function Navbar() {
       {isMobileMenuOpen && (
         <>
           <div className="sidebar">
-            <ul>
-              {topLinks.map((link, index) => (
-                <li key={`top-${index}`}>
-                  <a href="#" onClick={() => setIsMobileMenuOpen(false)}>{link}</a>
+            <div className="sidebar-top">
+              <button
+                className="close-btn"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <FaTimes size={20} />
+              </button>
+              <button className="search-btn" aria-label="Search">
+                <FaSearch size={16} />
+              </button>
+            </div>
+
+            <ul className="sidebar-links">
+              {sidebarLinks.map((link, index) => (
+                <li key={index}>
+                  <a href="#" onClick={() => setIsMobileMenuOpen(false)}>
+                    {link}
+                  </a>
                 </li>
               ))}
-              {mainLinks.map((link, index) => (
-                <li key={`main-${index}`}>
-                  <a href="#" onClick={() => setIsMobileMenuOpen(false)}>{link}</a>
-                </li>
-              ))}
-              <li>
-                <button className="search-btn" onClick={() => setIsMobileMenuOpen(false)}>
-                  <FaSearch size={16} />
-                </button>
-              </li>
-              <li>
-                <button className="contact-btn" onClick={() => setIsMobileMenuOpen(false)}>
-                  Contact Us
-                </button>
-              </li>
             </ul>
+
+            <div className="sidebar-bottom">
+              <button className="contact-btn">Contact Us</button>
+              <img src={sidebarImage} alt="Sidebar Visual" />
+            </div>
           </div>
 
-          {/* Overlay */}
-          <div className="overlay" onClick={() => setIsMobileMenuOpen(false)}></div>
+          <div className="overlay" onClick={() => setIsMobileMenuOpen(false)} />
         </>
       )}
     </nav>
